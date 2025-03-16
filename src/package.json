@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "scheduled-queries-with-amazom-timestreamdb",
   "type": "module",
   "scripts": {
     "bundle": "npm run bundle:handlers && npm run bundle:ingestions-api",
