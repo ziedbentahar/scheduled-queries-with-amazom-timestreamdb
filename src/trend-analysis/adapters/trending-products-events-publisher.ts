@@ -21,7 +21,6 @@ const publishTrendingProductsEvent = async (trendingProducts: TrendingProducts) 
 
     const result = await snsClient.send(new PublishCommand(params));
 
-    console.log({ result });
 };
 
 export { publishTrendingProductsEvent };
