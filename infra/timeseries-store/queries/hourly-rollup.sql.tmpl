@@ -1,0 +1,15 @@
+SELECT 
+    SUM(measure_value::bigint) as sum_measure, 
+    measure_name as eventType, 
+    bin(time, 1h) as time, 
+    productId,
+    pageId
+FROM 
+    ${table}
+WHERE
+ time BETWEEN @scheduled_runtime - (interval '2' hour) AND @scheduled_runtime 
+GROUP BY
+    measure_name, 
+    bin(time, 1h), 
+    productId,
+    pageId
